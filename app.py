@@ -359,7 +359,6 @@ if page == "Explorar plantas":
                     rare_only = st.checkbox("Solo plantas raras / especiales", value=False, key="filter_rare")
                 else:
                     rare_only = False
-                    st.caption("Rareza: preparada para el campo `rareza`; el dataset actual no contiene clasificaciones de rareza.")
 
         controls_left, controls_right = st.columns([1, 4])
         with controls_left:
