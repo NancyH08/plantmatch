@@ -6,7 +6,7 @@
 
 ## Problema
 
-Las tiendas en línea muestran precio y disponibilidad, pero la información de cuidado suele ser inconsistente o difícil de comparar. PlantMatch integra datos comerciales con reseñas y características botánicas para permitir filtros útiles como luz, riego, interior/exterior, precio, calificación, disponibilidad y tienda.
+Las tiendas en línea muestran precio y disponibilidad, pero la información de cuidado suele ser inconsistente o difícil de comparar. PlantMatch integra datos comerciales con reseñas y características botánicas para permitir búsqueda por nombre y filtros útiles como familia botánica, luz, riego, interior/exterior, tipo de planta, precio, calificación, disponibilidad y tienda.
 
 ## Fuente 1 — Web Scraping
 

@@ -49,3 +49,10 @@ La fuente simulada falló tres veces. El módulo aplicó backoff, registró el e
 Todo el código Python se compiló con `python -m compileall` sin errores de sintaxis.
 
 La interfaz Streamlit queda incluida y configurada; debe validarse visualmente en la computadora del equipo después de instalar las dependencias de `requirements.txt`.
+
+
+## Pruebas de filtros de interfaz
+
+La lógica de filtrado se aisló en `ui_helpers.py` para poder probarla sin depender del navegador. Los tests verifican búsqueda por nombre común/científico, combinación de familia + cuidados + precio y el comportamiento seguro del filtro de rareza cuando ese dato no existe.
+
+La interfaz no inventa rareza: el filtro y la insignia solo se habilitan si el catálogo contiene `rareza` o `rarity` con valores reales.

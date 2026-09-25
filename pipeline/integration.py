@@ -22,8 +22,8 @@ def build_catalog(products: list[dict], reviews: list[dict], traits: list[dict])
     merged = product_df.merge(review_summary, on="product_id", how="left")
     if not trait_df.empty:
         trait_cols = [
-            "product_id", "common_name", "scientific_name", "sunlight",
-            "watering", "placement", "plant_type"
+            "product_id", "common_name", "scientific_name", "family", "sunlight",
+            "watering", "placement", "plant_type", "rareza"
         ]
         trait_df = trait_df[[c for c in trait_cols if c in trait_df.columns]]
         merged = merged.drop(columns=["scientific_name"], errors="ignore").merge(trait_df, on="product_id", how="left")

@@ -12,9 +12,10 @@ def test_build_catalog_merges_sources():
     ]
     traits = [{
         "product_id": "aloe-vera", "common_name": "Aloe vera", "scientific_name": "Aloe vera",
-        "sunlight": "Mucho sol", "watering": "Bajo", "placement": "Interior/Exterior", "plant_type": "Suculenta"
+        "family": "Asphodelaceae", "sunlight": "Mucho sol", "watering": "Bajo", "placement": "Interior/Exterior", "plant_type": "Suculenta"
     }]
     df = build_catalog(products, reviews, traits)
     assert len(df) == 1
     assert df.iloc[0]["avg_rating"] == 4.5
     assert df.iloc[0]["sunlight"] == "Mucho sol"
+    assert df.iloc[0]["family"] == "Asphodelaceae"

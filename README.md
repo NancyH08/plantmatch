@@ -47,7 +47,7 @@ cp .env.example .env
 Abre una terminal con el entorno activo:
 
 ```bash
-python scripts/serve_practice_store.py
+python -m scripts.serve_practice_store
 ```
 
 El e-commerce queda en `http://127.0.0.1:8001`.
@@ -63,7 +63,7 @@ La API queda en `http://127.0.0.1:8002`. Su documentación interactiva está en 
 Comprueba ambas fuentes con:
 
 ```bash
-python scripts/check_services.py
+python -m scripts.check_services
 ```
 
 ## 3. Ejecutar el pipeline
@@ -141,17 +141,17 @@ En fuentes reales, este identificador se obtendría mediante SKU cuando exista o
 
 ## Filtros de la interfaz
 
-La vista **Explorar plantas** permite filtrar por:
+La vista **Explorar plantas** permite:
 
-- luz;
-- frecuencia de riego;
-- interior/exterior;
-- precio máximo;
-- calificación mínima;
-- disponibilidad;
-- tienda.
+- buscar por nombre común, nombre publicado o nombre científico;
+- filtrar por familia botánica;
+- filtrar por luz, frecuencia de riego, interior/exterior y tipo de planta;
+- conservar los filtros de precio máximo, calificación mínima, disponibilidad y tienda;
+- consultar todas las ofertas encontradas por scraping, con precio, disponibilidad y enlace del producto.
 
-La vista **Comparar** resume hasta tres especies. La vista **Pipeline** muestra conteos, estado, duración, calidad de datos, errores y las últimas líneas del log.
+El catálogo incluye `family` desde la API botánica simulada. La interfaz también está preparada para un campo opcional `rareza` (o `rarity`): el filtro y la insignia solo aparecen cuando los datos realmente contienen ese valor; la UI no clasifica plantas como raras por su cuenta.
+
+La vista **Comparar** muestra hasta tres especies en formato lado a lado y conserva sus opciones de compra. La vista **Pipeline** permanece separada y muestra conteos, estado, duración, calidad de datos, errores, fuentes procesadas y las últimas líneas del log.
 
 ## Pruebas automáticas
 
